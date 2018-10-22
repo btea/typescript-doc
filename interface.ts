@@ -7,8 +7,8 @@
 */
 
 interface Person{
-    name: String,
-    age: number
+    name: String;
+    age: number;
 }
 
 let info: Person = {
@@ -28,8 +28,8 @@ let info: Person = {
 */
 
 interface Person1{
-    name: string,
-    age?: number // age属性可添加可不添加
+    name: string;
+    age?: number; // age属性可添加可不添加
 }
 
 /**
@@ -37,9 +37,9 @@ interface Person1{
  * 有时候我们希望一个接口允许有任意的属性，可以使用如下方式
 */
 interface Person2{
-    name: string,
-    age?: number,
-    [propName: string]: any 
+    name: string;
+    age?: number;
+    [propName: string]: any;
 }
 
 // 使用 [propName: string] 定义了任意属性取string类型的值。
@@ -50,5 +50,35 @@ let info2: Person2 = {
     age: 10,
     gender: 'male'
 }
+// 上例中，任意属性的值允许是任意类型，所以不会报错
 
 
+// interface Person3 {
+//     name: string;
+//     age?: number;
+//     [propName: string]: string;
+// }
+// interface.ts:58:5 - error TS2411: Property 'age' of type 'number' is not assignable to string index type 'string'.
+// 任意属性的值允许是string，但是可选属性age的值却是number，number不是string的子属性，所以报错了
+
+
+
+/**
+ * 只读属性
+ * 有时候我们希望对象中的一些字段只能在创建的时候被赋值，那么可以用readonly定义只读属性
+*/
+interface Person4{
+    readonly id: number;
+    name: string;
+    age?: number;
+    [propName: string]: any;
+}
+let info4: Person4 = {
+    name: 'Tom',
+    gender: 'male'
+};
+info4.id = 89757;
+// interface.ts:76:5 - error TS2322: Type '{ name: string; gender: string; }' is not assignable to type 'Person4'.
+//   Property 'id' is missing in type '{ name: string; gender: string; }'.
+
+// interface.ts:80:7 - error TS2540: Cannot assign to 'id' because it is a constant or a read-only property.
