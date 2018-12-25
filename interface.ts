@@ -53,7 +53,6 @@ let info2: Person2 = {
 // 上例中，任意属性的值允许是任意类型，所以不会报错
 
 
-<<<<<<< HEAD
 // interface Person3 {
 //     name: string;
 //     age?: number;
@@ -64,13 +63,10 @@ let info2: Person2 = {
 
 
 
-=======
->>>>>>> 8ca3fb7ff44ae08ffad278f35f12ab55b29e5415
 /**
  * 只读属性
  * 有时候我们希望对象中的一些字段只能在创建的时候被赋值，那么可以用readonly定义只读属性
 */
-<<<<<<< HEAD
 interface Person4{
     readonly id: number;
     name: string;
@@ -86,7 +82,3 @@ info4.id = 89757;
 //   Property 'id' is missing in type '{ name: string; gender: string; }'.
 
 // interface.ts:80:7 - error TS2540: Cannot assign to 'id' because it is a constant or a read-only property.
-=======
-
-
->>>>>>> 8ca3fb7ff44ae08ffad278f35f12ab55b29e5415
