@@ -1,0 +1,19 @@
+{
+  "name": "typescript-doc",
+  "version": "0.0.1",
+  "description": "[definite-assignment-assertions !](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#definite-assignment-assertions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btea/typescript-doc.git"
+  },
+  "author": "btea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btea/typescript-doc/issues"
+  },
+  "homepage": "https://github.com/btea/typescript-doc#readme"
+}
