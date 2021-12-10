@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/btea/typescript-doc/issues"
   },
-  "homepage": "https://github.com/btea/typescript-doc#readme"
+  "homepage": "https://github.com/btea/typescript-doc#readme",
+  "dependencies": {
+    "typescript": "^4.5.3"
+  }
 }
